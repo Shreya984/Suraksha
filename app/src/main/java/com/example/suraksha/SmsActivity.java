@@ -87,11 +87,11 @@ public class SmsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // calling of getContacts()
-                if (db.count() != 5) {
+                if (db.count() != 10) {
                     Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                     startActivityForResult(intent, PICK_CONTACT);
                 } else {
-                    Toast.makeText(SmsActivity.this, "Can't Add more than 5 Contacts", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SmsActivity.this, "Can't Add more than 10 Contacts", Toast.LENGTH_SHORT).show();
                 }
             }
         });

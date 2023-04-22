@@ -44,4 +44,16 @@ public class HelplineActivity extends AppCompatActivity {
         intent.setData(Uri.parse("tel:102"));
         startActivity(intent);
     }
+
+    public void callFireBrigade(View v){
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:101"));
+        startActivity(intent);
+    }
+
+    public void callSeniorCitizen(View v){
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:14567"));
+        startActivity(intent);
+    }
 }

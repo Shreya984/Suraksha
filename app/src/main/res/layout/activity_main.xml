@@ -9,7 +9,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,9 +23,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nunito_semibold"
-                android:text="Hi, Welcome to Suraksha!"
+                android:text="@string/welcome_text"
                 android:textColor="#000000"
-                android:textSize="26sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/tagline"
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="46dp"
                 android:fontFamily="@font/nunito_sans"
-                android:text="Stay fearless and confident with Suraksha - your personal safety guardian."
+                android:text="@string/tagline"
                 android:textColor="#000000"
                 android:textSize="16sp" />
         </RelativeLayout>
@@ -62,40 +62,37 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="12dp">
+                    android:padding="12dp"
+                    tools:ignore="UselessParent">
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
                         android:src="@drawable/sos"
-                        app:srcCompat="@drawable/sos" />
+                        app:srcCompat="@drawable/sos"
+                        android:importantForAccessibility="no" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="24dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
+                        android:layout_marginVertical="8dp"
                         android:fontFamily="@font/nunito_sans_bold"
                         android:gravity="center"
-                        android:text="Add the Emergency Contacts"
+                        android:text="@string/add_the_emergency_contacts"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:layout_marginVertical="8dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="TextSizeCheck" />
+
                     <TextView
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:fontFamily="@font/nunito_semibold"
-                        android:gravity="center"
                         android:layout_marginBottom="8dp"
-                        android:text="Add the contacts from your list whom you wanted to send the SOS messages."
+                        android:gravity="center"
+                        android:text="@string/sos_message"
                         android:textColor="@color/black"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        tools:ignore="TextSizeCheck" />
                 </LinearLayout>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -126,21 +123,22 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="8dp"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_gravity="center"
                         android:src="@drawable/siren"
-                        android:layout_centerInParent="true"
-                        app:srcCompat="@drawable/siren" />
+                        app:srcCompat="@drawable/siren"
+                        android:importantForAccessibility="no" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/nunito_sans_bold"
                         android:gravity="center"
-                        android:text="Fake\nSiren Alert"
+                        android:text="@string/fake_siren_alert"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -163,21 +161,22 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:padding="8dp"
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_gravity="center"
                         android:src="@drawable/helpline"
-                        android:layout_centerInParent="true"
-                        app:srcCompat="@drawable/helpline" />
+                        app:srcCompat="@drawable/helpline"
+                        android:importantForAccessibility="no" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/nunito_sans_bold"
                         android:gravity="center"
-                        android:text="Emergency\nHelplines"
+                        android:text="@string/emergency_nhelplines"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -206,13 +205,14 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="8dp">
+
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
+                    android:importantForAccessibility="no"
                     android:src="@drawable/review"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/review" />
+                    tools:ignore="ImageContrastCheck" />
                 <TextView
                     android:id="@+id/review"
                     android:layout_width="match_parent"
@@ -226,22 +226,20 @@
                     android:textSize="18sp"
                     android:background="@null"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/review_message"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:fontFamily="@font/nunito_semibold"
-                    android:gravity="center"
-                    android:textColorLink="@color/black"
                     android:layout_marginBottom="12dp"
                     android:background="@null"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:gravity="center"
                     android:text="@string/review_message"
                     android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textColorLink="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="TextSizeCheck,TextSizeCheck" />
             </LinearLayout>
         </androidx.cardview.widget.CardView
             >
