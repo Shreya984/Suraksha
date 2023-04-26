@@ -68,11 +68,11 @@ public class CustomAdapter extends ArrayAdapter<ContactModel> {
         ivDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
-                builder1.setMessage("Do you really want to delete ?");
-                builder1.setCancelable(true);
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setMessage("Do you really want to delete ?");
+                builder.setCancelable(true);
 
-                builder1.setPositiveButton(
+                builder.setPositiveButton(
                         "Yes",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -86,7 +86,7 @@ public class CustomAdapter extends ArrayAdapter<ContactModel> {
                             }
                         });
 
-                builder1.setNegativeButton(
+                builder.setNegativeButton(
                         "No",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -94,8 +94,8 @@ public class CustomAdapter extends ArrayAdapter<ContactModel> {
                             }
                         });
 
-                AlertDialog alert11 = builder1.create();
-                alert11.show();
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 

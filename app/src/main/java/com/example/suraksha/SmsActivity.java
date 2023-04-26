@@ -49,7 +49,7 @@ public class SmsActivity extends AppCompatActivity {
     private static final int PICK_CONTACT = 1;
 
     //create instances of various classes to be used
-    Button button1;
+    Button button;
     ListView listView;
     DbHelper db;
     List<ContactModel> list;
@@ -76,22 +76,22 @@ public class SmsActivity extends AppCompatActivity {
         }
 
 
-        button1 = findViewById(R.id.add_button);
+        button = findViewById(R.id.add_button);
         listView = (ListView) findViewById(R.id.ListView);
         db = new DbHelper(this);
         list = db.getAllContacts();
         customAdapter = new CustomAdapter(this, list);
         listView.setAdapter(customAdapter);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // calling of getContacts()
-                if (db.count() != 10) {
+                if (db.count() != 5) {
                     Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                     startActivityForResult(intent, PICK_CONTACT);
                 } else {
-                    Toast.makeText(SmsActivity.this, "Can't Add more than 10 Contacts", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SmsActivity.this, "Can't add more than 5 contacts!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -150,7 +150,7 @@ public class SmsActivity extends AppCompatActivity {
                             if (hasPhone.equalsIgnoreCase("1")) {
                                 Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id, null, null);
                                 phones.moveToFirst();
-                                phone = phones.getString(phones.getColumnIndex("data1"));
+                                phone = phones.getString(phones.getColumnIndex("data"));
                             }
                             String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
                             db.addcontact(new ContactModel(0, name, phone));
