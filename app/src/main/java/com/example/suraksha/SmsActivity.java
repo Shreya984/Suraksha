@@ -150,7 +150,7 @@ public class SmsActivity extends AppCompatActivity {
                             if (hasPhone.equalsIgnoreCase("1")) {
                                 Cursor phones = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id, null, null);
                                 phones.moveToFirst();
-                                phone = phones.getString(phones.getColumnIndex("data"));
+                                phone = phones.getString(phones.getColumnIndex("data1"));
                             }
                             String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
                             db.addcontact(new ContactModel(0, name, phone));
