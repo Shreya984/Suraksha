@@ -18,6 +18,7 @@
             android:layout_marginStart="14dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_sans"
             tools:text="Name"
             android:textSize="20sp"/>
         <TextView
@@ -26,6 +27,7 @@
             android:padding="4dp"
             android:layout_marginStart="14dp"
             android:layout_width="match_parent"
+            android:fontFamily="@font/nunito_sans"
             android:layout_height="wrap_content"
             tools:text="TextView"
             android:textSize="12sp"/>

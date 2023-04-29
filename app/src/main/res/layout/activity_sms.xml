@@ -18,6 +18,7 @@
         android:bottomRightRadius="20dp"
         android:text="@string/add_emergency_contact"
         android:textColor="#212121"
+        android:fontFamily="@font/nunito_sans_bold"
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp"
         tools:ignore="VisualLintButtonSize" />
