@@ -24,15 +24,13 @@ To install Suraksha, follow these steps:
 
 ### Usage
 To use Suraksha, follow these steps:
-
 1. Open the Suraksha app.
 2. Add emergency contacts by clicking on the "Add the Emergency Contact" button.
 3. Press the Fake Siren Alert Button in case of an emergency or **Shake your phone more than 3 times**.
 4. The emergency message with your current location will be sent to the person added to the emergency contact list.
 
 ### Contributing
-Contributions to Suraksha are always welcome! 
-
+Contributions to Suraksha are always welcome!
 Here are some ways you can contribute:
 1. Report bugs or suggest new features by opening an issue.
 2. Fix bugs or implement new features by opening a pull request.
